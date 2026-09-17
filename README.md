@@ -1,2 +1,1 @@
-# eumedical-challenge
-Test task for Eumedical
+This is a Eumedical Challenge project

@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors */
+  --color-eumedical-dark-blue: #1e4865;
+  --color-eumedical-medium-aquamarine: #79b19c;
+  --color-eumedical-light-aquamarine: #bfd7cd;
+  --color-eumedical-light-blue: #d9e4de;
+  --color-eumedical-dark-orange: #e79f1a;
+  --color-eumedical-plain-yellow: #efbc0b;
+  --color-eumedical-light-grey: #f2f2f2;
+  --color-eumedical-white: #ffffff;
+  --color-eumedical-black: #000000;
+
+  /* Typography */
+  --font-dinosaur: 'Dinosaur Book', sans-serif;
+  --font-didact: 'Didact Gothic', sans-serif;
+  --font-arial: 'Helvetica', sans-serif;
+}
+
+/* Base Styles enforcing the brand typography rules */
+@layer base {
+  body {
+    background-color: var(--color-eumedical-white);
+    color: var(--color-eumedical-black);
+    font-family: var(--font-arial);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-dinosaur);
+  }
+}
