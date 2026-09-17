@@ -1,20 +1,30 @@
-// import { useState } from 'react'
-import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from './components/layout/Header';
+
+// A temporary component for our landing page content
+function LandingPage() {
+  return (
+    <main className="flex-1 bg-eumedical-light-grey min-h-screen p-8">
+      <h1 className="text-4xl text-eumedical-dark-blue font-bold">
+        Bienvenido a Eumedical
+      </h1>
+    </main>
+  );
+}
 
 function App() {
 
   return (
     <>
-      <div className="flex min-h-screen items-center justify-center bg-eumedical-light-grey">
-        <div className="p-8 rounded-xl shadow-lg bg-eumedical-dark-blue text-center">
-          <h1 className="text-4xl text-eumedical-white font-bold mb-4">
-            Tailwind is Working!
-          </h1>
-          <p className="text-xl text-eumedical-plain-yellow font-didact">
-            Eumedical Theme Loaded
-          </p>
-        </div>
+      <BrowserRouter>
+      <div className="flex min-h-screen flex-col">
+        <Header />
+
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+        </Routes>
       </div>
+    </BrowserRouter>
     </>
   )
 }
