@@ -29,31 +29,32 @@ export default function Header() {
         {/* Desktop Navigation - Changed from md:flex to lg:flex */}
         <nav className="hidden lg:flex items-center gap-10">
 
-          {/* Servicios Dropdown */}
+{/* Servicios Dropdown */}
           <div className="group relative py-4">
             <NavLink
               to="/services"
+              aria-haspopup="true"
               className={({ isActive }) =>
                 `flex items-center gap-1 text-xl font-didact transition-colors ${
                   isActive
                     ? "font-extrabold text-eumedical-dark-orange underline decoration-2 underline-offset-8"
-                    : "font-semibold text-eumedical-dark-blue hover:text-eumedical-medium-aquamarine"
+                    : "font-semibold text-eumedical-dark-blue hover:text-eumedical-medium-aquamarine focus:text-eumedical-medium-aquamarine outline-none"
                 }`
               }
             >
               Servicios
-              <ChevronDown className="h-5 w-5 transition-transform group-hover:rotate-180" />
+              <ChevronDown className="h-5 w-5 transition-transform group-hover:rotate-180 group-focus-within:rotate-180" />
             </NavLink>
 
             {/* Dropdown Menu */}
-            <div className="absolute left-0 top-full invisible mt-0 flex w-72 flex-col rounded-b-lg bg-eumedical-white py-2 opacity-0 shadow-lg transition-all duration-300 group-hover:visible group-hover:translate-y-1 group-hover:opacity-100">
+            <div className="absolute left-0 top-full invisible mt-0 flex w-72 flex-col rounded-b-lg bg-eumedical-white py-2 opacity-0 shadow-lg transition-all duration-300 group-hover:visible group-hover:translate-y-1 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-1 group-focus-within:opacity-100">
               <NavLink 
                 to="/services/red-medica" 
                 className={({ isActive }) =>
-                  `px-6 py-3 font-didact text-sm font-semibold transition-colors hover:bg-eumedical-light-grey ${
+                  `px-6 py-3 font-didact text-sm font-semibold transition-colors hover:bg-eumedical-light-grey focus:bg-eumedical-light-grey outline-none ${
                     isActive
                       ? "text-eumedical-dark-orange"
-                      : "text-eumedical-dark-blue hover:text-eumedical-dark-orange"
+                      : "text-eumedical-dark-blue hover:text-eumedical-dark-orange focus:text-eumedical-dark-orange"
                   }`
                 }
               >
@@ -62,10 +63,10 @@ export default function Header() {
               <NavLink 
                 to="/services/atencion-digital" 
                 className={({ isActive }) =>
-                  `px-6 py-3 font-didact text-sm font-semibold transition-colors hover:bg-eumedical-light-grey ${
+                  `px-6 py-3 font-didact text-sm font-semibold transition-colors hover:bg-eumedical-light-grey focus:bg-eumedical-light-grey outline-none ${
                     isActive
                       ? "text-eumedical-dark-orange"
-                      : "text-eumedical-dark-blue hover:text-eumedical-dark-orange"
+                      : "text-eumedical-dark-blue hover:text-eumedical-dark-orange focus:text-eumedical-dark-orange"
                   }`
                 }
               >
@@ -74,10 +75,10 @@ export default function Header() {
               <NavLink 
                 to="/services/tecnologia" 
                 className={({ isActive }) =>
-                  `px-6 py-3 font-didact text-sm font-semibold transition-colors hover:bg-eumedical-light-grey ${
+                  `px-6 py-3 font-didact text-sm font-semibold transition-colors hover:bg-eumedical-light-grey focus:bg-eumedical-light-grey outline-none ${
                     isActive
                       ? "text-eumedical-dark-orange"
-                      : "text-eumedical-dark-blue hover:text-eumedical-dark-orange"
+                      : "text-eumedical-dark-blue hover:text-eumedical-dark-orange focus:text-eumedical-dark-orange"
                   }`
                 }
               >
@@ -86,10 +87,10 @@ export default function Header() {
               <NavLink 
                 to="/services/domicilio" 
                 className={({ isActive }) =>
-                  `px-6 py-3 font-didact text-sm font-semibold transition-colors hover:bg-eumedical-light-grey ${
+                  `px-6 py-3 font-didact text-sm font-semibold transition-colors hover:bg-eumedical-light-grey focus:bg-eumedical-light-grey outline-none ${
                     isActive
                       ? "text-eumedical-dark-orange"
-                      : "text-eumedical-dark-blue hover:text-eumedical-dark-orange"
+                      : "text-eumedical-dark-blue hover:text-eumedical-dark-orange focus:text-eumedical-dark-orange"
                   }`
                 }
               >
