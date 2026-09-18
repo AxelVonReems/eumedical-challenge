@@ -1,3 +1,4 @@
+import BottomCta from '../../components/landing/BottomCta';
 import Capabilities from '../../components/landing/Capabilities';
 import CoverageVideo from '../../components/landing/CoverageVideo';
 import Faq from '../../components/landing/Faq';
@@ -14,14 +15,7 @@ export function Index() {
       <Capabilities />
       <SocialProof />
       <Faq />
-
-      {/* Bottom CTA */}
-
-      <section className="p-8 min-h-[1000px]">
-        <h2 className="text-3xl text-eumedical-dark-blue font-bold text-center mt-8">
-          Bienvenido a Eumedical
-        </h2>
-      </section>
+      <BottomCta />
     </main>
   );
 }
