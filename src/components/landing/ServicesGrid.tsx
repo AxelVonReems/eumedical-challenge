@@ -55,11 +55,11 @@ export default function ServicesGrid() {
                 />
               </div>
 
-              <h3 className="text-center font-didact uppercase font-bold text-eumedical-dark-blue mb-3">
+              <h3 className="text-center font-didact text-lg uppercase font-bold text-eumedical-dark-blue mb-3">
                 {service.title}
               </h3>
 
-              <p className="text-center font-arial text-sm text-eumedical-dark-blue/80">
+              <p className="text-center font-arial text-md text-eumedical-dark-blue/80">
                 {service.description}
               </p>
             </Link>

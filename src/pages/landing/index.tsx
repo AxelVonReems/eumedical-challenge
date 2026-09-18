@@ -1,6 +1,7 @@
+import Capabilities from '../../components/landing/Capabilities';
+import CoverageVideo from '../../components/landing/CoverageVideo';
 import Hero from '../../components/landing/Hero';
 import ServicesGrid from '../../components/landing/ServicesGrid';
-import CoverageVideo from '../../components/landing/CoverageVideo';
 
 export function Index() {
   return (
@@ -8,8 +9,11 @@ export function Index() {
       <Hero />
       <ServicesGrid />
       <CoverageVideo />
+      <Capabilities />
 
-
+      {/* Reviews */}
+      {/* FAQ */}
+      {/* Bottom CTA */}
 
       <section className="p-8 min-h-[1000px]">
         <h2 className="text-3xl text-eumedical-dark-blue font-bold text-center mt-8">
