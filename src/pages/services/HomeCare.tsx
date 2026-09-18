@@ -1,4 +1,4 @@
-import ServiceTemplate from './ServiceTemplate';
+import ServiceTemplate from '../../components/services/ServiceTemplate';
 import imageHomeCare from '../../assets/photos/Services-image-4.webp';
 
 export default function HomeCare() {

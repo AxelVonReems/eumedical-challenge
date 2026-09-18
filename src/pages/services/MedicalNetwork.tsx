@@ -1,4 +1,4 @@
-import ServiceTemplate from './ServiceTemplate';
+import ServiceTemplate from '../../components/services/ServiceTemplate';
 import imageMedicalNetwork from '../../assets/photos/Services-image-1.webp';
 
 export default function MedicalNetwork() {

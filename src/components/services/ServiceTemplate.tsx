@@ -19,7 +19,7 @@ export default function ServiceTemplate({
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
           {/* Left Column (Text and Button) */}
-          <div className="order-2 lg:order-1 flex flex-col items-start">
+          <div className="order-2 lg:order-1 flex flex-col items-start animate-in fade-in slide-in-from-left-8 duration-700 ease-out">
             <h2 className="font-dinosaur text-4xl md:text-5xl text-eumedical-dark-blue uppercase mb-8">
               {title}
             </h2>

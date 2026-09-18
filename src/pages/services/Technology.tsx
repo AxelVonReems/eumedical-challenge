@@ -1,4 +1,4 @@
-import ServiceTemplate from './ServiceTemplate';
+import ServiceTemplate from '../../components/services/ServiceTemplate';
 import imageTechnology from '../../assets/photos/Services-image-3.webp';
 
 export default function Technology() {

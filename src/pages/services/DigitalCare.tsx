@@ -1,4 +1,4 @@
-import ServiceTemplate from './ServiceTemplate';
+import ServiceTemplate from '../../components/services/ServiceTemplate';
 import imageDigitalCare from '../../assets/photos/Services-image-2.webp';
 
 export default function DigitalCare() {

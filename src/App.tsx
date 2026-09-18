@@ -11,6 +11,10 @@ import HomeCare from './pages/services/HomeCare';
 import MedicalNetwork from './pages/services/MedicalNetwork';
 import Technology from './pages/services/Technology';
 
+import PrivacyPolicy from './pages/legal/PrivacyPolicy';
+import TermsOfService from './pages/legal/TermsOfService';
+
+
 
 // Define a layout for public pages that includes the Header
 function PublicLayout() {
@@ -50,6 +54,8 @@ function App() {
           <Route path="/services/home-care" element={<HomeCare />} />
           <Route path="/services/medical-network" element={<MedicalNetwork />} />
           <Route path="/services/technology" element={<Technology />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
         </Route>
 
         {/* Routes that WILL NOT have the Header */}
