@@ -1,6 +1,6 @@
 import { BrowserRouter, Outlet, Routes, Route } from 'react-router-dom';
 
-import { Index } from './pages/landing/index';
+import Index from './pages/landing/Index';
 
 import ScrollToTop from './utils/ScrollToTop';
 import Header from './components/layout/Header';
@@ -14,6 +14,7 @@ import Technology from './pages/services/Technology';
 import PrivacyPolicy from './pages/legal/PrivacyPolicy';
 import TermsOfService from './pages/legal/TermsOfService';
 
+import About from './pages/about/About';
 
 
 // Define a layout for public pages that includes the Header
@@ -48,7 +49,7 @@ function App() {
         {/* Routes that WILL have the Header */}
         <Route element={<PublicLayout />}>
           <Route path="/" element={<Index />} />
-          <Route path="/about" element={<div className="p-8">Sobre nosotros</div>} />
+          <Route path="/about" element={<About />} />
           <Route path="/contact" element={<div className="p-8">Contacto</div>} />
           <Route path="/services/digital-care" element={<DigitalCare />} />
           <Route path="/services/home-care" element={<HomeCare />} />

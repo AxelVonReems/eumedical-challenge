@@ -6,7 +6,7 @@ import Hero from '../../components/landing/Hero';
 import ServicesGrid from '../../components/landing/ServicesGrid';
 import SocialProof from '../../components/landing/SocialProof';
 
-export function Index() {
+export default function Index() {
   return (
     <main className="flex-1 bg-eumedical-white min-h-screen flex flex-col">
       <Hero />

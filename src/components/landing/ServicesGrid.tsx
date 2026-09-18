@@ -8,25 +8,25 @@ const services = [
   {
     title: 'RED MÉDICA PROPIA',
     description: 'Nuestra red médica propia disponible en más de 80 países y más de 10 idiomas',
-    href: '/services/red-medica',
+    href: '/services/medical-network',
     icon: iconRed,
   },
   {
     title: 'ATENCIÓN MÉDICA DIGITAL 24/7',
     description: 'Accesibles en cualquier momento, desde cualquier lugar',
-    href: '/services/atencion-medica-digital',
+    href: '/services/digital-care',
     icon: iconAttention,
   },
   {
     title: 'TECNOLOGÍA AVANZADA',
     description: 'Sin desarrollo de IT. Segura, fiable, user friendly y avanzada',
-    href: '/services/tecnologia-avanzada',
+    href: '/services/technology',
     icon: iconTechnology,
   },
   {
     title: 'MÉDICOS A DOMICILIO',
     description: 'Coordinación de visitas médicas a domicilio en España, Portugal, Italia y Francia',
-    href: '/services/medicos-a-domicilio',
+    href: '/services/home-care',
     icon: iconHome,
   },
 ];
@@ -39,12 +39,12 @@ export default function ServicesGrid() {
           Nuestros Servicios Principales
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {services.map((service) => (
             <Link
               key={service.title}
               to={service.href}
-              className="bg-eumedical-white p-5 rounded-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-eumedical-medium-aquamarine group"
+              className="bg-eumedical-light-grey p-4 rounded-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-eumedical-medium-aquamarine group"
             >
               <div className="w-36 h-36 flex items-center justify-center rounded-lg mx-auto mb-2">
                 <img 

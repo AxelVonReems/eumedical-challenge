@@ -36,7 +36,7 @@ export default function Hero() {
           </p>
 
           <Link
-            to="/services/atencion-digital"
+            to="/services/digital-care"
             className="
               inline-flex items-center justify-center bg-eumedical-plain-yellow text-eumedical-dark-blue font-bold px-8 py-4 
               rounded-lg shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg focus:outline-none 
