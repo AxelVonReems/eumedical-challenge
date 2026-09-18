@@ -7,7 +7,7 @@ import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 
 
-// 1. Define a layout for public pages that includes the Header
+// Define a layout for public pages that includes the Header
 function PublicLayout() {
   return (
     <div className="flex min-h-screen flex-col">
@@ -40,8 +40,8 @@ function App() {
         <Route element={<PublicLayout />}>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<div className="p-8">Sobre nosotros</div>} />
-          <Route path="/services/*" element={<div className="p-8">Servicios</div>} />
           <Route path="/contact" element={<div className="p-8">Contacto</div>} />
+          <Route path="/services/*" element={<div className="p-8">Servicios</div>} />
         </Route>
 
         {/* Routes that WILL NOT have the Header */}
