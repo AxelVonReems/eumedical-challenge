@@ -56,12 +56,12 @@ export default function Capabilities() {
   return (
     <section 
       aria-labelledby="capabilities-heading" 
-      className="py-5 lg:py-20 bg-eumedical-white"
+      className="py-5 lg:py-12 bg-eumedical-white"
     >
       <div className="max-w-7xl mx-auto px-4">
         <h2 
           id="capabilities-heading" 
-          className="font-dinosaur text-eumedical-dark-blue text-center text-3xl md:text-4xl mb-12"
+          className="font-dinosaur text-3xl md:text-4xl text-eumedical-dark-blue text-center mb-12"
         >
           Capacidades Médicas Internacionales
         </h2>

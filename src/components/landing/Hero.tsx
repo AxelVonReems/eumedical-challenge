@@ -7,7 +7,7 @@ export default function Hero() {
       aria-labelledby="hero-heading" 
       className="
         relative w-full max-w-[1600px] mx-auto aspect-3/2 min-h-[400px] max-h-[600px] lg:max-h-[750px] 2xl:max-h-[900px] 
-        flex items-center justify-center md:justify-start overflow-hidden bg-eumedical-light-grey
+        flex items-center justify-center md:justify-start overflow-hidden bg-eumedical-white
       "
     >
       <img

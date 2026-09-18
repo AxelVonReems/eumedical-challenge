@@ -2,13 +2,13 @@ export default function CoverageVideo() {
   return (
     <section 
       aria-labelledby="coverage-video-heading" 
-      className="py-5 lg:py-20 bg-eumedical-white"
+      className="py-5 lg:py-12 bg-eumedical-white"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <h2 
           id="coverage-video-heading" 
-          className="font-dinosaur text-3xl md:text-5xl text-eumedical-dark-blue text-center mb-12"
+          className="font-dinosaur text-3xl md:text-4xl text-eumedical-dark-blue text-center mb-12"
         >
           Nuestra cobertura a nivel mundial
         </h2>
