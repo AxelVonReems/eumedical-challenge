@@ -33,13 +33,13 @@ const services = [
 
 export default function ServicesGrid() {
   return (
-    <section aria-labelledby="services-heading" className="w-full py-16 bg-eumedical-light-grey">
+    <section aria-labelledby="services-heading" className="w-full pt-8 pb-4 lg:pt-16 lg:pb-8 bg-eumedical-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 id="services-heading" className="sr-only">
           Nuestros Servicios Principales
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           {services.map((service) => (
             <Link
               key={service.title}
