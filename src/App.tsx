@@ -1,15 +1,27 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Outlet, Routes, Route } from 'react-router-dom';
+
+import { Index } from './pages/landing/Index';
 import Header from './components/layout/Header';
 
-// A temporary component for our landing page content
-function LandingPage() {
+
+// 1. Define a layout for public pages that includes the Header
+function PublicLayout() {
   return (
-    <main className="flex-1 bg-eumedical-light-grey min-h-screen p-8">
-      <h1 className="text-4xl text-eumedical-dark-blue font-bold">
-        Bienvenido a Eumedical
-      </h1>
-    </main>
+    <div className="flex min-h-screen flex-col">
+      <Header />
+      {/* Outlet renders whatever child route is currently active */}
+      <Outlet /> 
+    </div>
   );
+}
+
+// Temporary placeholder components for testing
+function LoginPage() {
+  return <div className="flex min-h-screen items-center justify-center text-2xl">Login Page (No Header)</div>;
+}
+
+function DashboardPage() {
+  return <div className="min-h-screen bg-eumedical-light-grey p-8 text-2xl">Dashboard (No Header)</div>;
 }
 
 function App() {
@@ -17,13 +29,20 @@ function App() {
   return (
     <>
       <BrowserRouter>
-      <div className="flex min-h-screen flex-col">
-        <Header />
 
         <Routes>
-          <Route path="/" element={<LandingPage />} />
-        </Routes>
-      </div>
+        {/* Routes that WILL have the Header */}
+        <Route element={<PublicLayout />}>
+          <Route path="/" element={<Index />} />
+          <Route path="/about" element={<div className="p-8">Sobre nosotros</div>} />
+          <Route path="/services/*" element={<div className="p-8">Servicios</div>} />
+          <Route path="/contact" element={<div className="p-8">Contacto</div>} />
+        </Route>
+
+        {/* Routes that WILL NOT have the Header */}
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
+      </Routes>
     </BrowserRouter>
     </>
   )
