@@ -180,7 +180,7 @@ export default function Header() {
           `lg:hidden absolute left-0 top-full w-full bg-eumedical-white border-t border-eumedical-light-grey shadow-lg transition-all duration-300 origin-top overflow-hidden ${
             isMobileMenuOpen 
               ? "scale-y-100 opacity-100 visible" 
-              : "scale-y-0 opacity-0 invisible h-0"
+              : "scale-y-0 opacity-0 invisible"
           }`
         }
       >

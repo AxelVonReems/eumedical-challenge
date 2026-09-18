@@ -1,9 +1,11 @@
-import Hero from '../../components/layout/Hero';
+import Hero from '../../components/landing/Hero';
+import ServicesGrid from '../../components/landing/ServicesGrid';
 
 export function Index() {
   return (
     <main className="flex-1 bg-eumedical-light-grey min-h-screen flex flex-col">
       <Hero />
+      <ServicesGrid />
 
 
 

@@ -120,7 +120,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link to="/terms-of-use" className={`${linkStyles} text-md`}>
-                  Términos de uso
+                  Términos y Condiciones
                 </Link>
               </li>
             </ul>
