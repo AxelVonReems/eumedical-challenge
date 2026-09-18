@@ -1,8 +1,7 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import Telemedicine from '../../assets/photos/Telemedicine-1.jpg';
 
-const Hero: React.FC = () => {
+export default function Hero() {
   return (
     <section 
       aria-labelledby="hero-heading" 
@@ -18,7 +17,7 @@ const Hero: React.FC = () => {
         aria-hidden="false"
       />
 
-      {/* Contenedor del contenido superpuesto */}
+      {/* Hero content container */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div 
           className="bg-eumedical-light-grey/35 p-8 sm:p-10 md:p-12 max-w-2xl rounded-2xl shadow-xl flex flex-col items-center text-center md:items-start md:text-left backdrop-blur-sm"
@@ -52,5 +51,3 @@ const Hero: React.FC = () => {
     </section>
   );
 };
-
-export default Hero;

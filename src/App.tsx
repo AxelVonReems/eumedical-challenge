@@ -2,6 +2,7 @@ import { BrowserRouter, Outlet, Routes, Route } from 'react-router-dom';
 
 import { Index } from './pages/landing/Index';
 import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
 
 
 // 1. Define a layout for public pages that includes the Header
@@ -11,6 +12,7 @@ function PublicLayout() {
       <Header />
       {/* Outlet renders whatever child route is currently active */}
       <Outlet /> 
+      <Footer />
     </div>
   );
 }

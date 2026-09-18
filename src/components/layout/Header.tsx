@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { ChevronDown, Menu, X } from 'lucide-react';
-import logo from '../../assets/logos/eumedical-logo-blue.png'; 
+import logo from '../../assets/logos/eumedical-logo-blue.png';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -10,7 +10,6 @@ export default function Header() {
 
   const location = useLocation();
   const isServicesActive = location.pathname.startsWith('/services');
-
 
   // Helper to close mobile menus when a link is clicked
   const closeMenu = () => {
