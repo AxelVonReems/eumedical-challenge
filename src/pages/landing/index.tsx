@@ -1,5 +1,6 @@
 import Capabilities from '../../components/landing/Capabilities';
 import CoverageVideo from '../../components/landing/CoverageVideo';
+import Faq from '../../components/landing/Faq';
 import Hero from '../../components/landing/Hero';
 import ServicesGrid from '../../components/landing/ServicesGrid';
 import SocialProof from '../../components/landing/SocialProof';
@@ -12,8 +13,8 @@ export function Index() {
       <CoverageVideo />
       <Capabilities />
       <SocialProof />
+      <Faq />
 
-      {/* FAQ */}
       {/* Bottom CTA */}
 
       <section className="p-8 min-h-[1000px]">
