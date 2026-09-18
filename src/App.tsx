@@ -6,6 +6,11 @@ import ScrollToTop from './utils/ScrollToTop';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 
+import DigitalCare from './pages/services/DigitalCare';
+import HomeCare from './pages/services/HomeCare';
+import MedicalNetwork from './pages/services/MedicalNetwork';
+import Technology from './pages/services/Technology';
+
 
 // Define a layout for public pages that includes the Header
 function PublicLayout() {
@@ -41,7 +46,10 @@ function App() {
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<div className="p-8">Sobre nosotros</div>} />
           <Route path="/contact" element={<div className="p-8">Contacto</div>} />
-          <Route path="/services/*" element={<div className="p-8">Servicios</div>} />
+          <Route path="/services/digital-care" element={<DigitalCare />} />
+          <Route path="/services/home-care" element={<HomeCare />} />
+          <Route path="/services/medical-network" element={<MedicalNetwork />} />
+          <Route path="/services/technology" element={<Technology />} />
         </Route>
 
         {/* Routes that WILL NOT have the Header */}

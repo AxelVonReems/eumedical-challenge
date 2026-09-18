@@ -67,7 +67,7 @@ export default function Header() {
               }`}
             >
               <NavLink 
-                to="/services/red-medica" 
+                to="/services/medical-network" 
                 onClick={handleDesktopSubmenuClick}
                 className={({ isActive }) =>
                   `px-6 py-3 font-didact text-sm font-semibold transition-colors hover:bg-eumedical-light-grey focus:bg-eumedical-light-grey outline-none ${
@@ -80,7 +80,7 @@ export default function Header() {
                 Red médica propia
               </NavLink>
               <NavLink 
-                to="/services/atencion-digital" 
+                to="/services/digital-care" 
                 onClick={handleDesktopSubmenuClick}
                 className={({ isActive }) =>
                   `px-6 py-3 font-didact text-sm font-semibold transition-colors hover:bg-eumedical-light-grey focus:bg-eumedical-light-grey outline-none ${
@@ -93,7 +93,7 @@ export default function Header() {
                 Atencion médica digital 24/7
               </NavLink>
               <NavLink 
-                to="/services/tecnologia" 
+                to="/services/technology" 
                 onClick={handleDesktopSubmenuClick}
                 className={({ isActive }) =>
                   `px-6 py-3 font-didact text-sm font-semibold transition-colors hover:bg-eumedical-light-grey focus:bg-eumedical-light-grey outline-none ${
@@ -106,7 +106,7 @@ export default function Header() {
                 Tecnología avanzada
               </NavLink>
               <NavLink 
-                to="/services/domicilio" 
+                to="/services/home-care" 
                 onClick={handleDesktopSubmenuClick}
                 className={({ isActive }) =>
                   `px-6 py-3 font-didact text-sm font-semibold transition-colors hover:bg-eumedical-light-grey focus:bg-eumedical-light-grey outline-none ${
@@ -211,7 +211,7 @@ export default function Header() {
               }
             >
               <NavLink
-                to="/services/red-medica"
+                to="/services/medical-network"
                 onClick={closeMenu}
                 className={({ isActive }) => 
                   `py-2 font-didact text-sm ${
@@ -224,7 +224,7 @@ export default function Header() {
                 Red médica propia
               </NavLink>
               <NavLink
-                to="/services/atencion-digital"
+                to="/services/digital-care"
                 onClick={closeMenu}
                                 className={({ isActive }) => 
                   `py-2 font-didact text-sm ${
@@ -237,7 +237,7 @@ export default function Header() {
                 Atención médica digital 24/7
               </NavLink>
               <NavLink
-                to="/services/tecnologia"
+                to="/services/technology"
                 onClick={closeMenu}
                 className={({ isActive }) => 
                   `py-2 font-didact text-sm ${
@@ -250,7 +250,7 @@ export default function Header() {
                 Tecnología avanzada
               </NavLink>
               <NavLink
-                to="/services/domicilio"
+                to="/services/home-care"
                 onClick={closeMenu}
                 className={({ isActive }) => 
                   `py-2 font-didact text-sm ${

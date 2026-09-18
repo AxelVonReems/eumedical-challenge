@@ -34,23 +34,23 @@ export default function Footer() {
             </h2>
             <ul className="space-y-4">
               <li>
-                <Link to="/services/telemedicina" className={linkStyles}>
-                  Telemedicina
+                <Link to="/services/medical-network" className={linkStyles}>
+                  Red médica propia
                 </Link>
               </li>
               <li>
-                <Link to="/services/asistencia-domiciliaria" className={linkStyles}>
-                  Asistencia Domiciliaria
+                <Link to="/services/digital-care" className={linkStyles}>
+                  Atencion médica digital 24/7
                 </Link>
               </li>
               <li>
-                <Link to="/services/monitorizacion" className={linkStyles}>
-                  Monitorización Remota
+                <Link to="/services/technology" className={linkStyles}>
+                  Tecnología avanzada
                 </Link>
               </li>
               <li>
-                <Link to="/services/consultoria" className={linkStyles}>
-                  Consultoría Médica
+                <Link to="/services/home-care" className={linkStyles}>
+                  Médicos a domicilio
                 </Link>
               </li>
             </ul>

@@ -14,7 +14,7 @@ export default function ServiceTemplate({
   imageAlt,
 }: ServiceTemplateProps) {
   return (
-    <section className="py-24 bg-eumedical-white">
+    <section className="py-8 lg:py-12 bg-eumedical-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
@@ -44,7 +44,7 @@ export default function ServiceTemplate({
           </div>
 
           {/* Right Column (Image) */}
-          <div className="order-1 lg:order-2 aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+          <div className="order-1 md:mx-6 lg:mx-0 lg:order-2 aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
             <img 
               src={imageSrc} 
               alt={imageAlt} 
