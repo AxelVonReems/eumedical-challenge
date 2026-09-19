@@ -4,14 +4,16 @@ import imageHomeCare from '../../assets/photos/Services-image-4.webp';
 export default function HomeCare() {
   return (
     <ServiceTemplate 
-      title="RED MÉDICA PROPIA"
-      paragraphs={[
-        "Nuestra amplia presencia en más de 80 países, operando en más de 10 idiomas, nos permite ofrecer soluciones adaptadas con un profundo Know How local.",
-        "Este enfoque garantiza que el 99% de nuestras recetas locales sean aceptadas por los pacientes, optimizando su tiempo y mejorando notablemente la experiencia del usuario.",
-        "Además, ponemos a su disposición un servicio integral de medicina general y especialidades, capaz de cubrir las distintas necesidades de salud de sus clientes en cada región."
+      badgeText="Asistencia Presencial"
+      title="MÉDICOS A DOMICILIO"
+      description="Ofrecemos un exclusivo servicio de médicos a domicilio adaptado para viajeros y ejecutivos, pensado para quienes desean atención inmediata, profesional y discreta sin alterar su agenda."
+      benefits={[
+        "Desplazamiento a hoteles, apartamentos turísticos o residencias privadas.",
+        "Diagnósticos precisos y tratamientos efectivos por especialistas calificados.",
+        "Experiencia médica confiable que evita pérdidas de tiempo en salas de espera."
       ]}
       imageSrc={imageHomeCare}
-      imageAlt="Equipo de médicos profesionales de Eumedical"
+      imageAlt="Doctora visitando a un paciente en su domicilio"
     />
   );
 }
