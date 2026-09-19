@@ -8,7 +8,7 @@ import SocialProof from '../../components/landing/SocialProof';
 
 export default function Index() {
   return (
-    <main className="flex-1 bg-eumedical-white min-h-screen flex flex-col">
+    <main className="flex-1 bg-eumedical-light-grey/50 min-h-screen flex flex-col">
       <Hero />
       <ServicesGrid />
       <CoverageVideo />

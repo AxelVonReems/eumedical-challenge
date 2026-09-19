@@ -14,7 +14,7 @@ export default function ServiceTemplate({
   imageAlt,
 }: ServiceTemplateProps) {
   return (
-    <section className="py-8 lg:py-12 bg-eumedical-white">
+    <section className="py-8 lg:py-12 bg-eumedical-light-grey/50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
@@ -36,7 +36,7 @@ export default function ServiceTemplate({
             </div>
 
             <Link
-              to="/contacto"
+              to="/contact"
               className="inline-block bg-eumedical-medium-aquamarine text-eumedical-white font-didact font-bold px-8 py-4 rounded-xl hover:scale-105 transition-transform duration-300 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-eumedical-medium-aquamarine/50 focus-visible:ring-offset-4 focus-visible:ring-offset-eumedical-white"
             >
               Solicitar información

@@ -2,7 +2,7 @@ import imageAboutHero from '../../assets/photos/About-hero.jpg';
 
 export default function About() {
   return (
-    <main className="py-12 bg-eumedical-white">
+    <main className="py-12 bg-eumedical-light-grey/50">
 
       {/* Text Header */}
       <div className="max-w-5xl mx-auto text-center px-4 mb-16">

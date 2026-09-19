@@ -15,7 +15,7 @@ export default function LegalTemplate({
   sections,
 }: LegalTemplateProps) {
   return (
-    <main className="py-14 bg-eumedical-light-grey/30">
+    <main className="py-14 bg-eumedical-light-grey/50">
       <article className="max-w-3xl mx-auto bg-white rounded-2xl shadow-sm p-8 md:p-12">
 
         {/* Document Title */}

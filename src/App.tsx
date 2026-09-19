@@ -15,6 +15,7 @@ import PrivacyPolicy from './pages/legal/PrivacyPolicy';
 import TermsOfService from './pages/legal/TermsOfService';
 
 import About from './pages/about/About';
+import Contact from './pages/contact/Contact';
 
 
 // Define a layout for public pages that includes the Header
@@ -50,7 +51,7 @@ function App() {
         <Route element={<PublicLayout />}>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<div className="p-8">Contacto</div>} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/services/digital-care" element={<DigitalCare />} />
           <Route path="/services/home-care" element={<HomeCare />} />
           <Route path="/services/medical-network" element={<MedicalNetwork />} />
