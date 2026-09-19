@@ -58,7 +58,7 @@ export default function ServiceTemplate({
 
               <Link
                 to="/contact"
-                className="inline-block bg-eumedical-medium-aquamarine text-white font-didact font-bold px-8 py-4 rounded-xl hover:scale-105 transition-transform duration-300 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-eumedical-medium-aquamarine/50 focus-visible:ring-offset-4 focus-visible:ring-offset-[#f8fafc]"
+                className="self-center lg:self-start inline-block bg-eumedical-medium-aquamarine text-white font-didact font-bold px-8 py-4 rounded-xl hover:scale-105 transition-transform duration-300 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-eumedical-medium-aquamarine/50 focus-visible:ring-offset-4 focus-visible:ring-offset-[#f8fafc]"
               >
                 Solicitar información
               </Link>
