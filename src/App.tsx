@@ -17,6 +17,11 @@ import TermsOfService from './pages/legal/TermsOfService';
 import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
 
+import Login from './pages/auth/Login';
+
+
+import DashboardLayout from './components/layout/DashboardLayout';
+
 
 // Define a layout for public pages that includes the Header
 function PublicLayout() {
@@ -28,15 +33,6 @@ function PublicLayout() {
       <Footer />
     </div>
   );
-}
-
-// Temporary placeholder components for testing
-function LoginPage() {
-  return <div className="flex min-h-screen items-center justify-center text-2xl">Login Page (No Header)</div>;
-}
-
-function DashboardPage() {
-  return <div className="min-h-screen bg-eumedical-light-grey p-8 text-2xl">Dashboard (No Header)</div>;
 }
 
 function App() {
@@ -61,8 +57,10 @@ function App() {
         </Route>
 
         {/* Routes that WILL NOT have the Header */}
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<DashboardLayout />}>
+          {/* <Route index element={<DashboardIndex />} /> */}
+        </Route>
       </Routes>
     </BrowserRouter>
     </>
