@@ -32,10 +32,11 @@ export default function DashboardLayout() {
   const CurrentIcon = currentLink ? currentLink.icon : LayoutDashboard;
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col">
+    <div className="h-screen overflow-hidden bg-eumedical-light-grey flex flex-col pt-16">
+    {/* <div className="min-h-screen bg-eumedical-light-grey flex flex-col pt-16"> */}
 
       {/* Header (Cabecera Superior) */}
-      <header className="h-16 relative flex items-center justify-between w-full px-4 md:px-8 shrink-0">
+      <header className="fixed top-0 left-0 right-0 bg-eumedical-light-grey z-40 h-16 flex items-center justify-between px-4 md:px-8 shrink-0">
 
         {/* Left Group */}
         <div className="flex items-center gap-4 md:gap-6">
@@ -51,7 +52,7 @@ export default function DashboardLayout() {
           />
 
           {/* Divider and Patient Name (Desktop only) */}
-          <div className="h-6 w-px bg-gray-300 hidden md:block" aria-hidden="true"></div>
+          <div className="h-6 w-px bg-eumedical-light-aquamarine hidden md:block" aria-hidden="true"></div>
           <span className="font-didact text-eumedical-dark-blue text-xl font-bold hidden md:block">
             Bienvenidos, Paciente Demo
           </span>
@@ -69,7 +70,7 @@ export default function DashboardLayout() {
         <button
           type="button"
           onClick={() => setIsMobileMenuOpen(true)}
-          className="md:hidden p-2 -mr-2 text-gray-600 hover:bg-gray-200 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-eumedical-medium-aquamarine"
+          className="md:hidden p-2 -mr-2 text-eumedical-dark-blue/70 hover:bg-gray-200 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-eumedical-medium-aquamarine"
           aria-label="Abrir menú de navegación"
         >
           <Menu className="w-7 h-7" aria-hidden="true" />
@@ -135,12 +136,12 @@ export default function DashboardLayout() {
               isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
             }`}
           >
-            <div className="flex items-center justify-between p-4 border-b border-gray-100 shrink-0">
+            <div className="flex items-center justify-between p-4 border-b border-eumedical-light-blue shrink-0">
               <span className="font-didact text-eumedical-dark-blue text-lg font-bold">Paciente Demo</span>
               <button
                 type="button"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="p-2 text-gray-500 hover:bg-gray-100 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-eumedical-medium-aquamarine"
+                className="p-2 text-eumedical-dark-blue/70 hover:bg-eumedical-light-grey rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-eumedical-medium-aquamarine"
                 aria-label="Cerrar menú"
               >
                 <X className="w-7 h-7" aria-hidden="true" />
@@ -160,7 +161,7 @@ export default function DashboardLayout() {
                       `flex items-center gap-3 px-4 py-3 rounded-xl font-didact text-lg transition-colors ${
                         isActive
                           ? 'bg-eumedical-medium-aquamarine text-white font-bold'
-                          : 'bg-eumedical-white text-eumedical-dark-blue hover:bg-gray-50'
+                          : 'bg-eumedical-white text-eumedical-dark-blue hover:bg-eumedical-light-grey'
                       }`
                     }
                   >

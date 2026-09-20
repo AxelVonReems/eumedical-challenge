@@ -21,6 +21,7 @@ import Login from './pages/auth/Login';
 
 
 import DashboardLayout from './components/layout/DashboardLayout';
+import DashboardIndex from './pages/dashboard/DashboardIndex';
 
 
 // Define a layout for public pages that includes the Header
@@ -59,7 +60,7 @@ function App() {
         {/* Routes that WILL NOT have the Header */}
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<DashboardLayout />}>
-          {/* <Route index element={<DashboardIndex />} /> */}
+          <Route index element={<DashboardIndex />} />
         </Route>
       </Routes>
     </BrowserRouter>
