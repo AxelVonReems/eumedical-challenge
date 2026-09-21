@@ -64,7 +64,8 @@ export default function AppointmentReportModal({
           <button 
             type="button" 
             onClick={onClose}
-            className="text-gray-400 hover:text-red-500 transition-colors cursor-pointer p-1 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500"
+            className="text-gray-400 hover:text-red-500 transition-colors cursor-pointer p-1 rounded-lg 
+            focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500"
             aria-label="Cerrar modal"
           >
             <X className="w-6 h-6" aria-hidden="true" />
@@ -112,11 +113,15 @@ export default function AppointmentReportModal({
 
         {/* Modal Footer (Actions) */}
         <div 
-          className="p-6 border-t border-gray-100 bg-gray-50/50 flex flex-col-reverse sm:flex-row justify-between items-center gap-4 shrink-0"
+          className="p-6 border-t border-gray-100 bg-gray-50/50 flex flex-col-reverse sm:flex-row 
+          justify-between items-center gap-4 shrink-0"
         >
           <button 
             type="button"
-            className="flex items-center px-6 py-2.5 justify-center gap-2 bg-eumedical-medium-aquamarine lg:bg-eumedical-medium-aquamarine/50 lg:hover:bg-eumedical-medium-aquamarine transition-colors text-eumedical-white font-bold cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-eumedical-medium-aquamarine rounded-lg w-full sm:w-auto"
+            className="flex items-center px-6 py-2.5 justify-center gap-2 bg-eumedical-medium-aquamarine 
+            lg:bg-eumedical-medium-aquamarine/50 lg:hover:bg-eumedical-medium-aquamarine 
+            transition-colors text-eumedical-white font-bold cursor-pointer focus-visible:outline-none 
+            focus-visible:ring-2 focus-visible:ring-eumedical-medium-aquamarine rounded-lg w-full sm:w-auto"
           >
             <Download className="w-5 h-5" aria-hidden="true" />
             Descargar PDF
@@ -125,7 +130,9 @@ export default function AppointmentReportModal({
           <button 
             type="button" 
             onClick={onClose}
-            className="bg-gray-300 lg:bg-gray-200 text-gray-700 px-6 py-2.5 rounded-xl font-bold lg:hover:bg-gray-300 transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 w-full sm:w-auto"
+            className="bg-gray-300 lg:bg-gray-200 text-gray-700 px-6 py-2.5 rounded-xl font-bold 
+            lg:hover:bg-gray-300 transition-colors cursor-pointer focus-visible:outline-none 
+            focus-visible:ring-2 focus-visible:ring-gray-400 w-full sm:w-auto"
           >
             Cerrar
           </button>
