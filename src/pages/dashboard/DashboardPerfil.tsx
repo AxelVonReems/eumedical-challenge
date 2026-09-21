@@ -381,6 +381,18 @@ export default function DashboardPerfil() {
           </div>
         </div>
 
+        {/* Example of a mocked error state for the prototype */}
+        <div className="flex flex-col gap-1">
+          <p className="text-eumedical-dark-blue text-xl font-bold">Error handling for inputs</p>
+          <label className="text-sm font-didact text-gray-600">Correo Electrónico</label>
+          <input 
+            type="text" 
+            defaultValue="paciente@correo" 
+            className="border-2 border-red-500 bg-red-50 rounded-xl px-4 py-2 focus:outline-none text-red-900"
+          />
+          <span className="text-xs text-red-500 font-didact">Formato de correo inválido</span>
+        </div>
+
       </div>
     </div>
   );
