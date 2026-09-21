@@ -28,16 +28,16 @@ export default function NewAppointmentModal({ isOpen, onClose }: NewAppointmentM
 
   const modalContent = (
     <div 
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4"
+      className="fixed inset-0 z-100 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4"
       onClick={onClose}
       aria-modal="true"
       role="dialog"
     >
       <div 
-        className="bg-white rounded-3xl shadow-xl w-full max-w-lg overflow-hidden flex flex-col"
+        className="bg-eumedical-white rounded-3xl shadow-xl w-full max-w-lg overflow-hidden flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex justify-between items-center p-6 border-b border-gray-100 bg-gray-50/50">
+        <div className="flex justify-between items-center p-6 border-b border-eumedical-light-grey bg-gray-50/50">
           <div className="flex items-center gap-3">
             <CalendarPlus className="w-6 h-6 text-eumedical-medium-aquamarine" aria-hidden="true" />
             <h2 className="font-dinosaur text-xl text-eumedical-dark-blue">
@@ -63,7 +63,7 @@ export default function NewAppointmentModal({ isOpen, onClose }: NewAppointmentM
             <select 
               id="specialty"
               className="w-full border border-gray-200 rounded-xl px-4 py-3 focus:outline-none 
-              focus:border-eumedical-medium-aquamarine bg-white font-didact text-eumedical-dark-blue 
+              focus:border-eumedical-medium-aquamarine bg-eumedical-white font-didact text-eumedical-dark-blue 
               cursor-pointer"
             >
               <option value="">Seleccione una especialidad...</option>
@@ -80,7 +80,7 @@ export default function NewAppointmentModal({ isOpen, onClose }: NewAppointmentM
             <select 
               id="specialist"
               className="w-full border border-gray-200 rounded-xl px-4 py-3 focus:outline-none 
-              focus:border-eumedical-medium-aquamarine bg-white font-didact text-eumedical-dark-blue 
+              focus:border-eumedical-medium-aquamarine bg-eumedical-white font-didact text-eumedical-dark-blue 
               cursor-pointer"
             >
               <option value="any">Cualquier especialista</option>
@@ -98,7 +98,7 @@ export default function NewAppointmentModal({ isOpen, onClose }: NewAppointmentM
               id="datetime"
               min={minDateTime} 
               className="w-full border border-gray-200 rounded-xl px-4 py-3 focus:outline-none 
-              focus:border-eumedical-medium-aquamarine bg-white font-didact text-eumedical-dark-blue 
+              focus:border-eumedical-medium-aquamarine bg-eumedical-white font-didact text-eumedical-dark-blue 
               cursor-pointer"
             />
           </div>
@@ -112,7 +112,7 @@ export default function NewAppointmentModal({ isOpen, onClose }: NewAppointmentM
               rows={3}
               placeholder="Describa brevemente el motivo de su cita..."
               className="w-full border border-gray-200 rounded-xl px-4 py-3 focus:outline-none 
-              focus:border-eumedical-medium-aquamarine bg-white font-didact text-eumedical-dark-blue 
+              focus:border-eumedical-medium-aquamarine bg-eumedical-white font-didact text-eumedical-dark-blue 
               resize-none"
             ></textarea>
           </div>
@@ -130,7 +130,7 @@ export default function NewAppointmentModal({ isOpen, onClose }: NewAppointmentM
           </button>
           <button 
             type="button"
-            className="bg-eumedical-medium-aquamarine text-white px-6 py-2.5 rounded-xl 
+            className="bg-eumedical-medium-aquamarine text-eumedical-white px-6 py-2.5 rounded-xl 
             font-bold hover:bg-eumedical-dark-blue transition-colors cursor-pointer focus-visible:outline-none 
             focus-visible:ring-4 focus-visible:ring-eumedical-medium-aquamarine/50"
           >

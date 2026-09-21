@@ -19,11 +19,11 @@ export default function DashboardLayout() {
 
   const navLinks = [
     { to: '/dashboard', icon: LayoutDashboard, text: 'Inicio', end: true },
-    { to: '/dashboard/consultas', icon: Video, text: 'Consultas' },
-    { to: '/dashboard/historial', icon: History, text: 'Historial' },
-    { to: '/dashboard/documentos', icon: FileText, text: 'Documentos' },
-    { to: '/dashboard/recetas', icon: Pill, text: 'Recetas' },
-    { to: '/dashboard/perfil', icon: User, text: 'Mi Perfil' },
+    { to: '/dashboard/appointments', icon: Video, text: 'Consultas' },
+    { to: '/dashboard/history', icon: History, text: 'Historial' },
+    { to: '/dashboard/documents', icon: FileText, text: 'Documentos' },
+    { to: '/dashboard/prescriptions', icon: Pill, text: 'Recetas' },
+    { to: '/dashboard/profile', icon: User, text: 'Mi Perfil' },
   ];
 
   const location = useLocation();
