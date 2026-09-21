@@ -92,10 +92,10 @@ export default function DashboardHistorial() {
                     <button 
                       type="button" 
                       onClick={() => setIsModalOpen(true)}
-                      className="bg-eumedical-light-blue text-eumedical-dark-blue font-didact font-bold px-4 
-                      py-2 rounded-lg transition-colors hover:bg-eumedical-medium-aquamarine hover:text-eumedical-white 
-                      cursor-pointer focus-visible:outline-none focus-visible:ring-2 
-                      focus-visible:ring-eumedical-medium-aquamarine"
+                      className="bg-eumedical-medium-aquamarine lg:bg-eumedical-light-blue text-eumedical-white 
+                      lg:text-eumedical-dark-blue font-didact font-bold px-4 py-2 rounded-lg transition-colors 
+                      hover:bg-eumedical-medium-aquamarine hover:text-eumedical-white cursor-pointer 
+                      focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-eumedical-medium-aquamarine"
                     >
                       Ver informe
                     </button>
@@ -118,10 +118,10 @@ export default function DashboardHistorial() {
                   <td className="py-4 px-6 whitespace-nowrap">
                     <button 
                       type="button" 
-                      className="bg-eumedical-light-blue text-eumedical-dark-blue font-didact font-bold px-4 
-                      py-2 rounded-lg transition-colors hover:bg-eumedical-medium-aquamarine hover:text-eumedical-white 
-                      cursor-pointer focus-visible:outline-none focus-visible:ring-2 
-                      focus-visible:ring-eumedical-medium-aquamarine"
+                      className="bg-eumedical-medium-aquamarine lg:bg-eumedical-light-blue text-eumedical-white 
+                      lg:text-eumedical-dark-blue font-didact font-bold px-4 py-2 rounded-lg transition-colors 
+                      hover:bg-eumedical-medium-aquamarine hover:text-eumedical-white cursor-pointer 
+                      focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-eumedical-medium-aquamarine"
                     >
                       Ver informe
                     </button>
@@ -144,10 +144,10 @@ export default function DashboardHistorial() {
                   <td className="py-4 px-6 whitespace-nowrap">
                     <button 
                       type="button" 
-                      className="bg-eumedical-light-blue text-eumedical-dark-blue font-didact font-bold px-4 
-                      py-2 rounded-lg transition-colors hover:bg-eumedical-medium-aquamarine hover:text-eumedical-white 
-                      cursor-pointer focus-visible:outline-none focus-visible:ring-2 
-                      focus-visible:ring-eumedical-medium-aquamarine"
+                      className="bg-eumedical-medium-aquamarine lg:bg-eumedical-light-blue text-eumedical-white 
+                      lg:text-eumedical-dark-blue font-didact font-bold px-4 py-2 rounded-lg transition-colors 
+                      hover:bg-eumedical-medium-aquamarine hover:text-eumedical-white cursor-pointer 
+                      focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-eumedical-medium-aquamarine"
                     >
                       Ver informe
                     </button>
@@ -170,10 +170,10 @@ export default function DashboardHistorial() {
                   <td className="py-4 px-6 whitespace-nowrap">
                     <button 
                       type="button" 
-                      className="bg-eumedical-light-blue text-eumedical-dark-blue font-didact font-bold px-4 
-                      py-2 rounded-lg transition-colors hover:bg-eumedical-medium-aquamarine hover:text-eumedical-white 
-                      cursor-pointer focus-visible:outline-none focus-visible:ring-2 
-                      focus-visible:ring-eumedical-medium-aquamarine"
+                      className="bg-eumedical-medium-aquamarine lg:bg-eumedical-light-blue text-eumedical-white 
+                      lg:text-eumedical-dark-blue font-didact font-bold px-4 py-2 rounded-lg transition-colors 
+                      hover:bg-eumedical-medium-aquamarine hover:text-eumedical-white cursor-pointer 
+                      focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-eumedical-medium-aquamarine"
                     >
                       Ver informe
                     </button>
@@ -196,10 +196,10 @@ export default function DashboardHistorial() {
                   <td className="py-4 px-6 whitespace-nowrap">
                     <button 
                       type="button" 
-                      className="bg-eumedical-light-blue text-eumedical-dark-blue font-didact font-bold px-4 
-                      py-2 rounded-lg transition-colors hover:bg-eumedical-medium-aquamarine hover:text-eumedical-white 
-                      cursor-pointer focus-visible:outline-none focus-visible:ring-2 
-                      focus-visible:ring-eumedical-medium-aquamarine"
+                      className="bg-eumedical-medium-aquamarine lg:bg-eumedical-light-blue text-eumedical-white 
+                      lg:text-eumedical-dark-blue font-didact font-bold px-4 py-2 rounded-lg transition-colors 
+                      hover:bg-eumedical-medium-aquamarine hover:text-eumedical-white cursor-pointer 
+                      focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-eumedical-medium-aquamarine"
                     >
                       Ver informe
                     </button>

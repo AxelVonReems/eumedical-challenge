@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { X, FileText, Download, User } from 'lucide-react';
 
@@ -20,7 +21,16 @@ export default function AppointmentReportModal({
   onClose, 
   appointment 
 }: AppointmentReportModalProps) {
-  
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   const currentDoctor = appointment?.doctor || 'Dr. López';
@@ -39,12 +49,12 @@ export default function AppointmentReportModal({
 
       {/* Modal Container */}
       <div 
-        className="bg-eumedical-white rounded-3xl shadow-xl w-full max-w-2xl overflow-hidden flex flex-col"
+        className="max-h-[90vh] bg-eumedical-white rounded-3xl shadow-xl w-full max-w-2xl overflow-hidden flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
 
         {/* Modal Header */}
-        <div className="flex justify-between items-center p-6 border-b border-gray-100 bg-gray-50/50">
+        <div className="flex justify-between items-center p-6 border-b border-gray-100 bg-gray-50/50 shrink-0">
           <div className="flex items-center gap-3">
             <FileText className="w-6 h-6 text-eumedical-medium-aquamarine" aria-hidden="true" />
             <h2 className="font-dinosaur text-xl text-eumedical-dark-blue">
@@ -54,8 +64,7 @@ export default function AppointmentReportModal({
           <button 
             type="button" 
             onClick={onClose}
-            className="text-gray-400 hover:text-red-500 transition-colors cursor-pointer p-1 rounded-lg 
-            focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500"
+            className="text-gray-400 hover:text-red-500 transition-colors cursor-pointer p-1 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500"
             aria-label="Cerrar modal"
           >
             <X className="w-6 h-6" aria-hidden="true" />
@@ -63,7 +72,7 @@ export default function AppointmentReportModal({
         </div>
 
         {/* Report Body */}
-        <div className="p-6 flex flex-col gap-6">
+        <div className="p-6 flex flex-col gap-5 overflow-y-auto">
 
           {/* Block 1 (Basic Info) */}
           <div className="bg-gray-50 p-4 rounded-xl flex flex-col sm:flex-row justify-between sm:items-center gap-2">
@@ -103,15 +112,11 @@ export default function AppointmentReportModal({
 
         {/* Modal Footer (Actions) */}
         <div 
-          className="p-6 border-t border-gray-100 bg-gray-50/50 flex flex-col-reverse sm:flex-row 
-          justify-between items-center gap-4"
+          className="p-6 border-t border-gray-100 bg-gray-50/50 flex flex-col-reverse sm:flex-row justify-between items-center gap-4 shrink-0"
         >
           <button 
             type="button"
-            className="flex items-center px-6 py-2.5 justify-center gap-2 bg-eumedical-medium-aquamarine/50 
-            hover:bg-eumedical-medium-aquamarine transition-colors text-eumedical-white font-bold 
-            cursor-pointer focus-visible:outline-none focus-visible:ring-2 
-            focus-visible:ring-eumedical-medium-aquamarine rounded-lg w-full sm:w-auto"
+            className="flex items-center px-6 py-2.5 justify-center gap-2 bg-eumedical-medium-aquamarine lg:bg-eumedical-medium-aquamarine/50 lg:hover:bg-eumedical-medium-aquamarine transition-colors text-eumedical-white font-bold cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-eumedical-medium-aquamarine rounded-lg w-full sm:w-auto"
           >
             <Download className="w-5 h-5" aria-hidden="true" />
             Descargar PDF
@@ -120,9 +125,7 @@ export default function AppointmentReportModal({
           <button 
             type="button" 
             onClick={onClose}
-            className="bg-gray-200 text-gray-700 px-6 py-2.5 rounded-xl font-bold hover:bg-gray-300 
-            transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 
-            focus-visible:ring-gray-400 w-full sm:w-auto"
+            className="bg-gray-300 lg:bg-gray-200 text-gray-700 px-6 py-2.5 rounded-xl font-bold lg:hover:bg-gray-300 transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 w-full sm:w-auto"
           >
             Cerrar
           </button>

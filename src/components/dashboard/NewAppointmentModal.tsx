@@ -10,7 +10,6 @@ interface NewAppointmentModalProps {
 export default function NewAppointmentModal({ isOpen, onClose }: NewAppointmentModalProps) {
   const [minDateTime, setMinDateTime] = useState('');
 
-  // Effect to Calculate the Minimum Date (Now) When the Modal is Opened
   useEffect(() => {
     if (isOpen) {
       const now = new Date();
@@ -21,7 +20,12 @@ export default function NewAppointmentModal({ isOpen, onClose }: NewAppointmentM
       const minutes = String(now.getMinutes()).padStart(2, '0');
 
       setMinDateTime(`${year}-${month}-${day}T${hours}:${minutes}`);
+      document.body.style.overflow = 'hidden';
     }
+    
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
   }, [isOpen]);
 
   if (!isOpen) return null;
@@ -34,10 +38,10 @@ export default function NewAppointmentModal({ isOpen, onClose }: NewAppointmentM
       role="dialog"
     >
       <div 
-        className="bg-eumedical-white rounded-3xl shadow-xl w-full max-w-lg overflow-hidden flex flex-col"
+        className="max-h-[90vh] bg-eumedical-white rounded-3xl shadow-xl w-full max-w-lg overflow-hidden flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex justify-between items-center p-6 border-b border-eumedical-light-grey bg-gray-50/50">
+        <div className="flex justify-between items-center p-6 border-b border-eumedical-light-grey bg-gray-50/50 shrink-0">
           <div className="flex items-center gap-3">
             <CalendarPlus className="w-6 h-6 text-eumedical-medium-aquamarine" aria-hidden="true" />
             <h2 className="font-dinosaur text-xl text-eumedical-dark-blue">
@@ -55,7 +59,7 @@ export default function NewAppointmentModal({ isOpen, onClose }: NewAppointmentM
           </button>
         </div>
 
-        <div className="p-6 flex flex-col gap-5">
+        <div className="p-6 flex flex-col gap-5 overflow-y-auto">
           <div>
             <label htmlFor="specialty" className="text-sm font-didact text-gray-600 mb-1 block">
               Especialidad
@@ -112,27 +116,27 @@ export default function NewAppointmentModal({ isOpen, onClose }: NewAppointmentM
               rows={3}
               placeholder="Describa brevemente el motivo de su cita..."
               className="w-full border border-gray-200 rounded-xl px-4 py-3 focus:outline-none 
-              focus:border-eumedical-medium-aquamarine bg-eumedical-white font-didact text-eumedical-dark-blue 
-              resize-none"
+              focus:border-eumedical-medium-aquamarine bg-eumedical-white font-didact 
+              text-eumedical-dark-blue resize-none"
             ></textarea>
           </div>
         </div>
 
-        <div className="p-6 border-t border-gray-100 bg-gray-50/50 flex justify-end gap-4">
+        <div className="p-6 border-t border-gray-100 bg-gray-50/50 flex justify-end gap-4 shrink-0">
           <button 
             type="button" 
             onClick={onClose}
-            className="px-6 py-2.5 rounded-xl text-gray-600 font-bold hover:bg-gray-200 
-            transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 
-            focus-visible:ring-gray-300"
+            className="px-6 py-2.5 rounded-xl text-gray-600 font-bold bg-gray-200 lg:bg-gray-200/0 
+            lg:hover:bg-gray-200 transition-colors cursor-pointer focus-visible:outline-none 
+            focus-visible:ring-2 focus-visible:ring-gray-300"
           >
             Cancelar
           </button>
           <button 
             type="button"
-            className="bg-eumedical-medium-aquamarine text-eumedical-white px-6 py-2.5 rounded-xl 
-            font-bold hover:bg-eumedical-dark-blue transition-colors cursor-pointer focus-visible:outline-none 
-            focus-visible:ring-4 focus-visible:ring-eumedical-medium-aquamarine/50"
+            className="bg-eumedical-dark-blue lg:bg-eumedical-medium-aquamarine text-eumedical-white 
+            px-6 py-2.5 rounded-xl font-bold lg:hover:bg-eumedical-dark-blue transition-colors cursor-pointer 
+            focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-eumedical-medium-aquamarine/50"
           >
             Confirmar Solicitud
           </button>
