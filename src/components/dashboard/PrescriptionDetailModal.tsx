@@ -1,26 +1,26 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { X, FileText, Download, ShieldCheck } from 'lucide-react';
+import { X, Pill, Download, User, Calendar } from 'lucide-react';
 
-export interface DocumentData {
-  title?: string;
+export interface PrescriptionData {
+  medication?: string;
+  dosage?: string;
+  doctor?: string;
   date?: string;
-  specialty?: string;
-  type?: string;
-  description?: string;
+  instructions?: string;
 }
 
-interface DocumentDetailModalProps {
+interface PrescriptionDetailModalProps {
   isOpen: boolean;
   onClose: () => void;
-  document?: DocumentData;
+  prescription?: PrescriptionData;
 }
 
-export default function DocumentDetailModal({ 
+export default function PrescriptionDetailModal({ 
   isOpen, 
   onClose, 
-  document: documentData 
-}: DocumentDetailModalProps) {
+  prescription = {} 
+}: PrescriptionDetailModalProps) {
 
   useEffect(() => {
     if (isOpen && typeof document !== 'undefined') {
@@ -35,11 +35,11 @@ export default function DocumentDetailModal({
 
   if (!isOpen) return null;
 
-  const currentTitle = documentData?.title || 'Analítica de sangre general';
-  const currentDate = documentData?.date || '15 Sep 2026';
-  const currentSpecialty = documentData?.specialty || 'Laboratorio';
-  const currentType = documentData?.type || 'PDF (Firmado digitalmente)';
-  const currentDescription = documentData?.description || 'Resultado analítico completo que incluye hemograma completo, perfil lipídico, glucemia y función renal. Todos los valores se encuentran dentro de los rangos de referencia establecidos, sin alteraciones clínicas significativas a destacar.';
+  const currentMedication = prescription.medication || 'Ibuprofeno 600mg';
+  const currentDosage = prescription.dosage || '1 cada 8 horas (5 días)';
+  const currentDoctor = prescription.doctor || 'Dr. López';
+  const currentDate = prescription.date || '15 Sep 2026';
+  const currentInstructions = prescription.instructions || 'Tomar preferiblemente con alimentos para evitar molestias gástricas. No superar la dosis diaria recomendada. En caso de experimentar efectos secundarios adversos, suspenda la toma y consulte con su médico especialista.';
 
   const modalContent = (
     <div 
@@ -51,16 +51,16 @@ export default function DocumentDetailModal({
 
       {/* Modal Container */}
       <div 
-        className="max-h-[90vh] bg-white rounded-3xl shadow-xl w-full max-w-2xl overflow-hidden flex flex-col"
+        className="max-h-[90vh] bg-eumedical-white rounded-3xl shadow-xl w-full max-w-2xl overflow-hidden flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
 
         {/* Modal Header */}
         <div className="flex justify-between items-center p-6 border-b border-gray-100 bg-gray-50/50 shrink-0">
           <div className="flex items-center gap-3">
-            <FileText className="w-6 h-6 text-eumedical-medium-aquamarine" aria-hidden="true" />
+            <Pill className="w-6 h-6 text-eumedical-medium-aquamarine" aria-hidden="true" />
             <h2 className="font-dinosaur text-xl text-eumedical-dark-blue">
-              Detalle del Documento
+              Detalle de la Prescripción
             </h2>
           </div>
           <button 
@@ -77,10 +77,10 @@ export default function DocumentDetailModal({
         {/* Modal Body */}
         <div className="p-6 flex flex-col gap-6 overflow-y-auto">
 
-          {/* Document Title Overview */}
+          {/* Medication Title Overview */}
           <div>
             <h3 className="font-dinosaur text-lg text-eumedical-dark-blue">
-              {currentTitle}
+              {currentMedication} <span className="text-sm font-didact text-gray-500 font-normal">({currentDosage})</span>
             </h3>
           </div>
 
@@ -90,28 +90,31 @@ export default function DocumentDetailModal({
             text-eumedical-dark-blue"
           >
             <div className="flex flex-col gap-1">
-              <span className="text-xs text-gray-500 font-bold uppercase tracking-wider">Fecha y Especialidad</span>
-              <span>{currentDate} · <span className="font-semibold">{currentSpecialty}</span></span>
+              <span className="text-xs text-gray-500 font-bold uppercase tracking-wider">Médico Prescriptor</span>
+              <div className="flex items-center gap-1.5 font-semibold">
+                <User className="w-4 h-4 text-gray-400 shrink-0" aria-hidden="true" />
+                <span>{currentDoctor}</span>
+              </div>
             </div>
             <div className="flex flex-col gap-1">
-              <span className="text-xs text-gray-500 font-bold uppercase tracking-wider">Tipo de archivo</span>
-              <div className="flex items-center gap-1.5 text-eumedical-medium-aquamarine font-semibold">
-                <ShieldCheck className="w-4 h-4 shrink-0" aria-hidden="true" />
-                <span>{currentType}</span>
+              <span className="text-xs text-gray-500 font-bold uppercase tracking-wider">Fecha de validez</span>
+              <div className="flex items-center gap-1.5 font-semibold">
+                <Calendar className="w-4 h-4 text-gray-400 shrink-0" aria-hidden="true" />
+                <span>{currentDate}</span>
               </div>
             </div>
           </div>
 
-          {/* Block 2 (Preview / Description) */}
+          {/* Block 2 (Instructions / Posology) */}
           <div className="flex flex-col gap-2">
             <h3 className="font-bold text-sm text-gray-500 uppercase tracking-wider">
-              Resumen del documento
+              Instrucciones y Posología
             </h3>
             <div 
-              className="border border-gray-200 rounded-xl p-4 bg-white font-didact text-gray-700 
+              className="border border-gray-200 rounded-xl p-4 bg-eumedical-white font-didact text-gray-700 
               leading-relaxed min-h-[120px]"
             >
-              {currentDescription}
+              {currentInstructions}
             </div>
           </div>
 
@@ -130,9 +133,9 @@ export default function DocumentDetailModal({
             focus-visible:ring-2 focus-visible:ring-eumedical-medium-aquamarine rounded-lg w-full sm:w-auto"
           >
             <Download className="w-5 h-5" aria-hidden="true" />
-            Descargar Archivo
+            Descargar Receta (PDF)
           </button>
-          
+
           <button 
             type="button" 
             onClick={onClose}

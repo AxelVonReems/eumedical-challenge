@@ -84,8 +84,8 @@ export default function DashboardDocumentos() {
                   <td className="py-4 px-6 whitespace-nowrap">Laboratorio</td>
                   <td className="py-4 px-6 whitespace-nowrap">
                     <span 
-                      className="inline-flex items-center justify-center bg-eumedical-light-grey 
-                      text-eumedical-dark-blue/70 font-bold text-xs px-3 py-1 rounded-full whitespace-nowrap"
+                      className="inline-flex items-center justify-center bg-red-700 
+                      text-eumedical-white font-bold text-xs px-3 py-1 rounded-full whitespace-nowrap"
                     >
                       PDF
                     </span>
@@ -94,10 +94,9 @@ export default function DashboardDocumentos() {
                     <button 
                       type="button" 
                       onClick={() => setIsModalOpen(true)} 
-                      className="bg-eumedical-medium-aquamarine lg:bg-eumedical-light-blue text-eumedical-white 
-                      lg:text-eumedical-dark-blue font-didact font-bold px-4 py-2 rounded-lg transition-colors 
-                      hover:bg-eumedical-medium-aquamarine hover:text-eumedical-white cursor-pointer 
-                      focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-eumedical-medium-aquamarine"
+                      className="bg-eumedical-dark-blue lg:bg-eumedical-medium-aquamarine text-eumedical-white 
+                      font-didact font-bold px-4 py-2 rounded-lg transition-colors hover:bg-eumedical-dark-blue 
+                      cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-eumedical-dark-blue"
                     >
                       Ver documento
                     </button>
@@ -114,8 +113,8 @@ export default function DashboardDocumentos() {
                   <td className="py-4 px-6 whitespace-nowrap">Radiología</td>
                   <td className="py-4 px-6 whitespace-nowrap">
                     <span 
-                      className="inline-flex items-center justify-center bg-eumedical-light-grey 
-                      text-eumedical-dark-blue/70 font-bold text-xs px-3 py-1 rounded-full whitespace-nowrap"
+                      className="inline-flex items-center justify-center bg-red-700 
+                      text-eumedical-white font-bold text-xs px-3 py-1 rounded-full whitespace-nowrap"
                     >
                       PDF
                     </span>
@@ -123,10 +122,9 @@ export default function DashboardDocumentos() {
                   <td className="py-4 px-6 whitespace-nowrap">
                     <button 
                       type="button" 
-                      className="bg-eumedical-medium-aquamarine lg:bg-eumedical-light-blue text-eumedical-white 
-                      lg:text-eumedical-dark-blue font-didact font-bold px-4 py-2 rounded-lg transition-colors 
-                      hover:bg-eumedical-medium-aquamarine hover:text-eumedical-white cursor-pointer 
-                      focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-eumedical-medium-aquamarine"
+                      className="bg-eumedical-dark-blue lg:bg-eumedical-medium-aquamarine text-eumedical-white 
+                      font-didact font-bold px-4 py-2 rounded-lg transition-colors hover:bg-eumedical-dark-blue 
+                      cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-eumedical-dark-blue"
                     >
                       Ver documento
                     </button>
@@ -143,8 +141,8 @@ export default function DashboardDocumentos() {
                   <td className="py-4 px-6 whitespace-nowrap">Traumatología</td>
                   <td className="py-4 px-6 whitespace-nowrap">
                     <span 
-                      className="inline-flex items-center justify-center bg-eumedical-light-grey 
-                      text-eumedical-dark-blue/70 font-bold text-xs px-3 py-1 rounded-full whitespace-nowrap"
+                      className="inline-flex items-center justify-center bg-red-700 
+                      text-eumedical-white font-bold text-xs px-3 py-1 rounded-full whitespace-nowrap"
                     >
                       PDF
                     </span>
@@ -152,10 +150,9 @@ export default function DashboardDocumentos() {
                   <td className="py-4 px-6 whitespace-nowrap">
                     <button 
                       type="button" 
-                      className="bg-eumedical-medium-aquamarine lg:bg-eumedical-light-blue text-eumedical-white 
-                      lg:text-eumedical-dark-blue font-didact font-bold px-4 py-2 rounded-lg transition-colors 
-                      hover:bg-eumedical-medium-aquamarine hover:text-eumedical-white cursor-pointer 
-                      focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-eumedical-medium-aquamarine"
+                      className="bg-eumedical-dark-blue lg:bg-eumedical-medium-aquamarine text-eumedical-white 
+                      font-didact font-bold px-4 py-2 rounded-lg transition-colors hover:bg-eumedical-dark-blue 
+                      cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-eumedical-dark-blue"
                     >
                       Ver documento
                     </button>
@@ -172,8 +169,8 @@ export default function DashboardDocumentos() {
                   <td className="py-4 px-6 whitespace-nowrap">Medicina General</td>
                   <td className="py-4 px-6 whitespace-nowrap">
                     <span 
-                      className="inline-flex items-center justify-center bg-eumedical-light-grey 
-                      text-eumedical-dark-blue/70 font-bold text-xs px-3 py-1 rounded-full whitespace-nowrap"
+                      className="inline-flex items-center justify-center bg-red-700 
+                      text-eumedical-white font-bold text-xs px-3 py-1 rounded-full whitespace-nowrap"
                     >
                       PDF
                     </span>
@@ -181,10 +178,9 @@ export default function DashboardDocumentos() {
                   <td className="py-4 px-6 whitespace-nowrap">
                     <button 
                       type="button" 
-                      className="bg-eumedical-medium-aquamarine lg:bg-eumedical-light-blue text-eumedical-white 
-                      lg:text-eumedical-dark-blue font-didact font-bold px-4 py-2 rounded-lg transition-colors 
-                      hover:bg-eumedical-medium-aquamarine hover:text-eumedical-white cursor-pointer 
-                      focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-eumedical-medium-aquamarine"
+                      className="bg-eumedical-dark-blue lg:bg-eumedical-medium-aquamarine text-eumedical-white 
+                      font-didact font-bold px-4 py-2 rounded-lg transition-colors hover:bg-eumedical-dark-blue 
+                      cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-eumedical-dark-blue"
                     >
                       Ver documento
                     </button>
@@ -201,8 +197,8 @@ export default function DashboardDocumentos() {
                   <td className="py-4 px-6 whitespace-nowrap">Radiología</td>
                   <td className="py-4 px-6 whitespace-nowrap">
                     <span 
-                      className="inline-flex items-center justify-center bg-eumedical-light-grey 
-                      text-eumedical-dark-blue/70 font-bold text-xs px-3 py-1 rounded-full whitespace-nowrap"
+                      className="inline-flex items-center justify-center bg-red-700 
+                      text-eumedical-white font-bold text-xs px-3 py-1 rounded-full whitespace-nowrap"
                     >
                       PDF
                     </span>
@@ -210,10 +206,9 @@ export default function DashboardDocumentos() {
                   <td className="py-4 px-6 whitespace-nowrap">
                     <button 
                       type="button" 
-                      className="bg-eumedical-medium-aquamarine lg:bg-eumedical-light-blue text-eumedical-white 
-                      lg:text-eumedical-dark-blue font-didact font-bold px-4 py-2 rounded-lg transition-colors 
-                      hover:bg-eumedical-medium-aquamarine hover:text-eumedical-white cursor-pointer 
-                      focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-eumedical-medium-aquamarine"
+                      className="bg-eumedical-dark-blue lg:bg-eumedical-medium-aquamarine text-eumedical-white 
+                      font-didact font-bold px-4 py-2 rounded-lg transition-colors hover:bg-eumedical-dark-blue 
+                      cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-eumedical-dark-blue"
                     >
                       Ver documento
                     </button>

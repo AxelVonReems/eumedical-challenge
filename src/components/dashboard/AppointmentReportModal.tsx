@@ -118,8 +118,8 @@ export default function AppointmentReportModal({
         >
           <button 
             type="button"
-            className="flex items-center px-6 py-2.5 justify-center gap-2 bg-eumedical-medium-aquamarine 
-            lg:bg-eumedical-medium-aquamarine/50 lg:hover:bg-eumedical-medium-aquamarine 
+            className="flex items-center px-6 py-2.5 justify-center gap-2 bg-eumedical-dark-blue 
+            lg:bg-eumedical-medium-aquamarine lg:hover:bg-eumedical-dark-blue 
             transition-colors text-eumedical-white font-bold cursor-pointer focus-visible:outline-none 
             focus-visible:ring-2 focus-visible:ring-eumedical-medium-aquamarine rounded-lg w-full sm:w-auto"
           >

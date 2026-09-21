@@ -25,6 +25,7 @@ import DashboardIndex from './pages/dashboard/DashboardIndex';
 import DashboardConsultas from './pages/dashboard/DashboardConsultas';
 import DashboardHistorial from './pages/dashboard/DashboardHistorial';
 import DashboardDocumentos from './pages/dashboard/DashboardDocumentos';
+import DashboardRecetas from './pages/dashboard/DashboardRecetas';
 
 
 // Define a layout for public pages that includes the Header
@@ -67,6 +68,7 @@ function App() {
           <Route path="appointments" element={<DashboardConsultas />} />
           <Route path="history" element={<DashboardHistorial />} />
           <Route path="documents" element={<DashboardDocumentos />} />
+          <Route path="prescriptions" element={<DashboardRecetas />} />
         </Route>
       </Routes>
     </BrowserRouter>

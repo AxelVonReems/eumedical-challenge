@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { ChevronLeft, ChevronRight, Search } from 'lucide-react';
-import AppointmentReportModal from '../../components/dashboard/AppointmentReportModal';
+import { ChevronLeft, ChevronRight, Search, Pill } from 'lucide-react';
+import PrescriptionDetailModal from '../../components/dashboard/PrescriptionDetailModal';
 
-export default function DashboardHistorial() {
+export default function DashboardRecetas() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
@@ -12,30 +12,29 @@ export default function DashboardHistorial() {
       <div className="flex justify-between items-start md:items-center flex-col md:flex-row gap-4">
         <div>
           <h1 className="font-dinosaur text-3xl text-eumedical-dark-blue">
-            Historial de Consultas
+            Mis Recetas
           </h1>
           <p className="text-gray-500 font-didact mt-2 text-lg">
-            Revisa tu historial médico.
+            Consulta tus prescripciones médicas activas y el historial de tratamientos.
           </p>
         </div>
       </div>
 
-      {/* Appointment History */}
+      {/* Prescriptions Section */}
       <section>
 
-        {/* Appointment History Header with Search Engine */}
+        {/* Prescriptions Header with Search Engine */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4">
-
           <div className="relative w-full sm:max-w-xs">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
               <Search className="w-5 h-5 text-eumedical-dark-blue/50" aria-hidden="true" />
             </div>
             <input 
               type="text" 
-              placeholder="Buscar doctor o especialidad..." 
+              placeholder="Buscar medicamento..." 
               className="border border-eumedical-light-blue rounded-xl pl-10 pr-4 py-2 w-full focus:outline-none 
               focus:ring-2 focus:ring-eumedical-medium-aquamarine font-didact text-eumedical-dark-blue 
-              placeholder:text-eumedical-dark-blue/50 transition-shadow"
+              placeholder:text-eumedical-dark-blue/50 transition-shadow bg-eumedical-white"
             />
           </div>
         </div>
@@ -49,17 +48,17 @@ export default function DashboardHistorial() {
                   <th className="bg-eumedical-light-grey text-eumedical-dark-blue/80 font-didact text-sm py-4 
                     px-6 border-b border-eumedical-light-blue font-bold uppercase tracking-wider whitespace-nowrap"
                   >
-                    Fecha
+                    Medicamento
                   </th>
                   <th className="bg-eumedical-light-grey text-eumedical-dark-blue/80 font-didact text-sm py-4 
                     px-6 border-b border-eumedical-light-blue font-bold uppercase tracking-wider whitespace-nowrap"
                   >
-                    Especialista
+                    Dosis
                   </th>
                   <th className="bg-eumedical-light-grey text-eumedical-dark-blue/80 font-didact text-sm py-4 
                     px-6 border-b border-eumedical-light-blue font-bold uppercase tracking-wider whitespace-nowrap"
                   >
-                    Especialidad
+                    Médico Prescriptor
                   </th>
                   <th className="bg-eumedical-light-grey text-eumedical-dark-blue/80 font-didact text-sm py-4 
                     px-6 border-b border-eumedical-light-blue font-bold uppercase tracking-wider whitespace-nowrap"
@@ -77,41 +76,47 @@ export default function DashboardHistorial() {
 
                 {/* Line 1 */}
                 <tr className="hover:bg-eumedical-light-grey/50 transition-colors">
-                  <td className="py-4 px-6 whitespace-nowrap">12 Ago 2026</td>
-                  <td className="py-4 px-6 whitespace-nowrap font-bold">Dr. López</td>
-                  <td className="py-4 px-6 whitespace-nowrap">Traumatología</td>
+                  <td className="py-4 px-6 whitespace-nowrap font-bold flex items-center gap-2">
+                    <Pill className="w-4 h-4 text-eumedical-medium-aquamarine shrink-0" aria-hidden="true" />
+                    Ibuprofeno 600mg
+                  </td>
+                  <td className="py-4 px-6 whitespace-nowrap">1 cada 8 horas (5 días)</td>
+                  <td className="py-4 px-6 whitespace-nowrap">Dr. López</td>
                   <td className="py-4 px-6 whitespace-nowrap">
                     <span 
                       className="inline-flex items-center justify-center bg-green-700 
                       text-eumedical-white font-bold text-xs px-3 py-1 rounded-full whitespace-nowrap"
                     >
-                      Completada
+                      Activa
                     </span>
                   </td>
                   <td className="py-4 px-6 whitespace-nowrap">
                     <button 
                       type="button" 
-                      onClick={() => setIsModalOpen(true)}
+                      onClick={() => setIsModalOpen(true)} 
                       className="bg-eumedical-dark-blue lg:bg-eumedical-medium-aquamarine text-eumedical-white 
                       font-didact font-bold px-4 py-2 rounded-lg transition-colors hover:bg-eumedical-dark-blue 
                       cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-eumedical-dark-blue"
                     >
-                      Ver informe
+                      Ver receta
                     </button>
                   </td>
                 </tr>
 
                 {/* Line 2 */}
                 <tr className="hover:bg-eumedical-light-grey/50 transition-colors">
-                  <td className="py-4 px-6 whitespace-nowrap">28 Jul 2026</td>
-                  <td className="py-4 px-6 whitespace-nowrap font-bold">Dra. Martínez</td>
-                  <td className="py-4 px-6 whitespace-nowrap">Medicina General</td>
+                  <td className="py-4 px-6 whitespace-nowrap font-bold flex items-center gap-2">
+                    <Pill className="w-4 h-4 text-eumedical-medium-aquamarine shrink-0" aria-hidden="true" />
+                    Paracetamol 1g
+                  </td>
+                  <td className="py-4 px-6 whitespace-nowrap">1 cada 8 horas (si dolor)</td>
+                  <td className="py-4 px-6 whitespace-nowrap">Dra. Martínez</td>
                   <td className="py-4 px-6 whitespace-nowrap">
                     <span 
                       className="inline-flex items-center justify-center bg-green-700 
                       text-eumedical-white font-bold text-xs px-3 py-1 rounded-full whitespace-nowrap"
                     >
-                      Completada
+                      Activa
                     </span>
                   </td>
                   <td className="py-4 px-6 whitespace-nowrap">
@@ -121,22 +126,25 @@ export default function DashboardHistorial() {
                       font-didact font-bold px-4 py-2 rounded-lg transition-colors hover:bg-eumedical-dark-blue 
                       cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-eumedical-dark-blue"
                     >
-                      Ver informe
+                      Ver receta
                     </button>
                   </td>
                 </tr>
 
                 {/* Line 3 */}
                 <tr className="hover:bg-eumedical-light-grey/50 transition-colors">
-                  <td className="py-4 px-6 whitespace-nowrap">05 Jun 2026</td>
-                  <td className="py-4 px-6 whitespace-nowrap font-bold">Dr. Fernández</td>
-                  <td className="py-4 px-6 whitespace-nowrap">Oftalmología</td>
+                  <td className="py-4 px-6 whitespace-nowrap font-bold flex items-center gap-2">
+                    <Pill className="w-4 h-4 text-eumedical-medium-aquamarine shrink-0" aria-hidden="true" />
+                    Omeprazol 20mg
+                  </td>
+                  <td className="py-4 px-6 whitespace-nowrap">1 en ayunas (14 días)</td>
+                  <td className="py-4 px-6 whitespace-nowrap">Dr. Fernández</td>
                   <td className="py-4 px-6 whitespace-nowrap">
                     <span 
-                      className="inline-flex items-center justify-center bg-green-700 
+                      className="inline-flex items-center justify-center bg-sky-700 
                       text-eumedical-white font-bold text-xs px-3 py-1 rounded-full whitespace-nowrap"
                     >
-                      Completada
+                      Finalizada
                     </span>
                   </td>
                   <td className="py-4 px-6 whitespace-nowrap">
@@ -146,22 +154,25 @@ export default function DashboardHistorial() {
                       font-didact font-bold px-4 py-2 rounded-lg transition-colors hover:bg-eumedical-dark-blue 
                       cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-eumedical-dark-blue"
                     >
-                      Ver informe
+                      Ver receta
                     </button>
                   </td>
                 </tr>
 
                 {/* Line 4 */}
                 <tr className="hover:bg-eumedical-light-grey/50 transition-colors">
-                  <td className="py-4 px-6 whitespace-nowrap">15 May 2026</td>
-                  <td className="py-4 px-6 whitespace-nowrap font-bold">Dra. Ruiz</td>
-                  <td className="py-4 px-6 whitespace-nowrap">Ginecología</td>
+                  <td className="py-4 px-6 whitespace-nowrap font-bold flex items-center gap-2">
+                    <Pill className="w-4 h-4 text-eumedical-medium-aquamarine shrink-0" aria-hidden="true" />
+                    Amoxicilina 500mg
+                  </td>
+                  <td className="py-4 px-6 whitespace-nowrap">1 cada 8 horas (7 días)</td>
+                  <td className="py-4 px-6 whitespace-nowrap">Dra. Ruiz</td>
                   <td className="py-4 px-6 whitespace-nowrap">
                     <span 
-                      className="inline-flex items-center justify-center bg-green-700 
+                      className="inline-flex items-center justify-center bg-sky-700 
                       text-eumedical-white font-bold text-xs px-3 py-1 rounded-full whitespace-nowrap"
                     >
-                      Completada
+                      Finalizada
                     </span>
                   </td>
                   <td className="py-4 px-6 whitespace-nowrap">
@@ -171,22 +182,25 @@ export default function DashboardHistorial() {
                       font-didact font-bold px-4 py-2 rounded-lg transition-colors hover:bg-eumedical-dark-blue 
                       cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-eumedical-dark-blue"
                     >
-                      Ver informe
+                      Ver receta
                     </button>
                   </td>
                 </tr>
 
                 {/* Line 5 */}
                 <tr className="hover:bg-eumedical-light-grey/50 transition-colors">
-                  <td className="py-4 px-6 whitespace-nowrap">02 Mar 2026</td>
-                  <td className="py-4 px-6 whitespace-nowrap font-bold">Dr. Sánchez</td>
-                  <td className="py-4 px-6 whitespace-nowrap">Neurología</td>
+                  <td className="py-4 px-6 whitespace-nowrap font-bold flex items-center gap-2">
+                    <Pill className="w-4 h-4 text-eumedical-medium-aquamarine shrink-0" aria-hidden="true" />
+                    Loratadina 10mg
+                  </td>
+                  <td className="py-4 px-6 whitespace-nowrap">1 comprimido al día (alergia estacional)</td>
+                  <td className="py-4 px-6 whitespace-nowrap">Dr. Sánchez</td>
                   <td className="py-4 px-6 whitespace-nowrap">
                     <span 
                       className="inline-flex items-center justify-center bg-green-700 
                       text-eumedical-white font-bold text-xs px-3 py-1 rounded-full whitespace-nowrap"
                     >
-                      Completada
+                      Activa
                     </span>
                   </td>
                   <td className="py-4 px-6 whitespace-nowrap">
@@ -196,7 +210,7 @@ export default function DashboardHistorial() {
                       font-didact font-bold px-4 py-2 rounded-lg transition-colors hover:bg-eumedical-dark-blue 
                       cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-eumedical-dark-blue"
                     >
-                      Ver informe
+                      Ver receta
                     </button>
                   </td>
                 </tr>
@@ -212,7 +226,7 @@ export default function DashboardHistorial() {
 
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <span className="text-sm text-eumedical-dark-blue/70 font-didact">
-                Mostrando 1 a 5 de 12 consultas
+                Mostrando 1 a 5 de 14 recetas
               </span>
               <select 
                 className="bg-eumedical-light-grey border border-eumedical-light-blue text-eumedical-dark-blue/80 
@@ -220,9 +234,9 @@ export default function DashboardHistorial() {
                 block p-2 font-didact outline-none cursor-pointer"
                 defaultValue="5"
               >
-                <option value="5">5 consultas por página</option>
-                <option value="10">10 consultas por página</option>
-                <option value="25">25 consultas por página</option>
+                <option value="5">5 recetas por página</option>
+                <option value="10">10 recetas por página</option>
+                <option value="25">25 recetas por página</option>
               </select>
             </div>
 
@@ -289,8 +303,8 @@ export default function DashboardHistorial() {
         </div>
       </section>
 
-      {/* Rendering Modal for New Appointment */}
-      <AppointmentReportModal 
+      {/* Rendering Modal for Document Details */}
+      <PrescriptionDetailModal 
         isOpen={isModalOpen} 
         onClose={() => setIsModalOpen(false)} 
       />
