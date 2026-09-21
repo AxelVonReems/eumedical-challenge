@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   ShieldCheck, 
@@ -9,8 +10,20 @@ import {
   FileText, 
   History 
 } from 'lucide-react';
+import AppointmentAlertModal from '../../components/dashboard/AppointmentAlertModal';
 
 export default function DashboardIndex() {
+  const [isAlertOpen, setIsAlertOpen] = useState(false);
+
+  useEffect(() => {
+    // Delay the modal slightly (1s) so the dashboard has time to render first
+    const timer = setTimeout(() => {
+      setIsAlertOpen(true);
+    }, 1 * 1000);
+    // Cleanup the timer if the component unmounts quickly
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="flex flex-col gap-8">
 
@@ -35,7 +48,7 @@ export default function DashboardIndex() {
           <div>
             <p className="text-sm text-eumedical-dark-blue/70 mb-1">Estado</p>
             <span 
-              className="inline-block bg-green-300 text-green-700 
+              className="inline-block bg-green-700 text-eumedical-white 
               font-bold px-3 py-1 rounded-full text-sm"
             >
               Activo
@@ -176,6 +189,11 @@ export default function DashboardIndex() {
         </Link>
 
       </div>
+
+      <AppointmentAlertModal 
+        isOpen={isAlertOpen} 
+        onClose={() => setIsAlertOpen(false)} 
+      />
 
     </div>
   );
