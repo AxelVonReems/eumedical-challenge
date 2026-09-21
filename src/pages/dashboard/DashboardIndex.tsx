@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { 
   ShieldCheck, 
   Calendar, 
@@ -130,44 +131,52 @@ export default function DashboardIndex() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
         {/* Card 1 (Treatments) */}
-        <div 
-          className="bg-eumedical-white rounded-2xl shadow-sm border border-eumedical-light-blue p-6 
-          hover:shadow-md transition-shadow cursor-pointer"
-        >
-          <div className="w-12 h-12 bg-eumedical-medium-aquamarine/10 rounded-full flex items-center justify-center mb-4">
-            <Pill className="w-6 h-6 text-eumedical-medium-aquamarine" aria-hidden="true" />
+        <Link to="/dashboard/prescriptions">
+          <div 
+            className="bg-eumedical-white rounded-2xl shadow-sm border border-eumedical-light-blue p-6 
+            hover:shadow-md transition-shadow cursor-pointer"
+          >
+            <div className="w-12 h-12 bg-eumedical-medium-aquamarine/10 rounded-full flex items-center justify-center mb-4">
+              <Pill className="w-6 h-6 text-eumedical-medium-aquamarine" aria-hidden="true" />
+            </div>
+            <p className="text-sm text-eumedical-dark-blue/70 mb-1">Medicación activa</p>
+            <p className="text-eumedical-dark-blue font-didact font-bold text-xl mb-2">2 tratamientos</p>
+            <p className="text-sm text-eumedical-dark-blue/70">Próxima toma: 14:00h</p>
           </div>
-          <p className="text-sm text-eumedical-dark-blue/70 mb-1">Medicación activa</p>
-          <p className="text-eumedical-dark-blue font-didact font-bold text-xl mb-2">2 tratamientos</p>
-          <p className="text-sm text-eumedical-dark-blue/70">Próxima toma: 14:00h</p>
-        </div>
+        </Link>
 
         {/* Card 2 (Documents) */}
-        <div 
-          className="bg-eumedical-white rounded-2xl shadow-sm border border-eumedical-light-blue p-6 
-          hover:shadow-md transition-shadow cursor-pointer"
-        >
-          <div className="w-12 h-12 bg-eumedical-dark-blue/10 rounded-full flex items-center justify-center mb-4">
-            <FileText className="w-6 h-6 text-eumedical-dark-blue" aria-hidden="true" />
+        <Link to="/dashboard/documents">
+          <div 
+            className="bg-eumedical-white rounded-2xl shadow-sm border border-eumedical-light-blue p-6 
+            hover:shadow-md transition-shadow cursor-pointer"
+          >
+            <div className="w-12 h-12 bg-eumedical-dark-blue/10 rounded-full flex items-center justify-center mb-4">
+              <FileText className="w-6 h-6 text-eumedical-dark-blue" aria-hidden="true" />
+            </div>
+            <p className="text-sm text-eumedical-dark-blue/70 mb-1">Informes médicos</p>
+            <p className="text-eumedical-dark-blue font-didact font-bold text-xl mb-2">1 informe nuevo</p>
+            <p className="text-sm text-eumedical-dark-blue/70">Analítica general (Ayer)</p>
           </div>
-          <p className="text-sm text-eumedical-dark-blue/70 mb-1">Informes médicos</p>
-          <p className="text-eumedical-dark-blue font-didact font-bold text-xl mb-2">1 informe nuevo</p>
-          <p className="text-sm text-eumedical-dark-blue/70">Analítica general (Ayer)</p>
-        </div>
+        </Link>
 
         {/* Card 3 (History) */}
-        <div 
-          className="bg-eumedical-white rounded-2xl shadow-sm border border-eumedical-light-blue p-6 
-          hover:shadow-md transition-shadow cursor-pointer"
-        >
-          <div className="w-12 h-12 bg-eumedical-light-grey rounded-full flex items-center justify-center mb-4">
-            <History className="w-6 h-6 text-eumedical-dark-blue/70" aria-hidden="true" />
+        <Link to="/dashboard/history">
+          <div 
+            className="bg-eumedical-white rounded-2xl shadow-sm border border-eumedical-light-blue p-6 
+            hover:shadow-md transition-shadow cursor-pointer"
+          >
+            <div className="w-12 h-12 bg-eumedical-light-grey rounded-full flex items-center justify-center mb-4">
+              <History className="w-6 h-6 text-eumedical-dark-blue/70" aria-hidden="true" />
+            </div>
+            <p className="text-sm text-eumedical-dark-blue/70 mb-1">Última consulta</p>
+            <p className="text-eumedical-dark-blue font-didact font-bold text-xl mb-2">Hace 15 días</p>
+            <p className="text-sm text-eumedical-dark-blue/70">Dermatología</p>
           </div>
-          <p className="text-sm text-eumedical-dark-blue/70 mb-1">Última consulta</p>
-          <p className="text-eumedical-dark-blue font-didact font-bold text-xl mb-2">Hace 15 días</p>
-          <p className="text-sm text-eumedical-dark-blue/70">Dermatología</p>
-        </div>
+        </Link>
+
       </div>
+
     </div>
   );
 }
