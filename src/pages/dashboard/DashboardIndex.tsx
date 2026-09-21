@@ -33,7 +33,10 @@ export default function DashboardIndex() {
           </div>
           <div>
             <p className="text-sm text-eumedical-dark-blue/70 mb-1">Estado</p>
-            <span className="inline-block bg-[#E8F5F3] text-eumedical-medium-aquamarine font-bold px-3 py-1 rounded-full text-sm">
+            <span 
+              className="inline-block bg-eumedical-light-aquamarine/50 text-eumedical-medium-aquamarine 
+              font-bold px-3 py-1 rounded-full text-sm"
+            >
               Activo
             </span>
           </div>
@@ -41,7 +44,10 @@ export default function DashboardIndex() {
       </div>
 
       {/* Featured Card: Upcoming Consultations (Next 7 days) */}
-      <div className="bg-eumedical-medium-aquamarine/10 border border-eumedical-medium-aquamarine/20 rounded-2xl p-6 md:p-8">
+      <div 
+        className="bg-eumedical-medium-aquamarine/10 border border-eumedical-medium-aquamarine/20 
+        rounded-2xl p-6 md:p-8"
+      >
         <div className="flex items-center gap-3 mb-6">
           <Calendar className="w-6 h-6 text-eumedical-dark-blue" aria-hidden="true" />
           <h2 className="text-eumedical-dark-blue font-dinosaur text-xl">
@@ -52,7 +58,10 @@ export default function DashboardIndex() {
         {/* Appointment List Container */}
         <div className="flex flex-col gap-4">
 
-          <div className="bg-eumedical-white border border-eumedical-light-blue rounded-xl p-5 flex flex-col xl:flex-row xl:items-center justify-between gap-6 shadow-sm">
+          <div 
+            className="bg-eumedical-white border border-eumedical-light-blue rounded-xl p-5 flex flex-col 
+            xl:flex-row xl:items-center justify-between gap-6 shadow-sm"
+          >
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-3 text-eumedical-dark-blue">
                 <User className="w-5 h-5 text-eumedical-light-aquamarine shrink-0" aria-hidden="true" />
@@ -70,14 +79,21 @@ export default function DashboardIndex() {
 
             <button 
               type="button"
-              className="flex items-center justify-center gap-2 bg-eumedical-plain-yellow text-eumedical-dark-blue font-bold rounded-xl px-6 py-4 md:py-3 hover:bg-eumedical-dark-orange transition-colors focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-eumedical-dark-blue w-full xl:w-auto shrink-0 cursor-pointer disabled:opacity-50 disabled:hover:bg-eumedical-plain-yellow disabled:cursor-not-allowed"
+              className="flex items-center justify-center gap-2 bg-eumedical-plain-yellow text-eumedical-dark-blue 
+              font-bold rounded-xl px-6 py-4 md:py-3 hover:bg-eumedical-dark-orange transition-colors 
+              focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-eumedical-dark-blue w-full 
+              xl:w-auto shrink-0 cursor-pointer disabled:opacity-50 disabled:hover:bg-eumedical-plain-yellow 
+              disabled:cursor-not-allowed"
             >
               <Video className="w-5 h-5" aria-hidden="true" />
               Acceder a teleconsulta
             </button>
           </div>
 
-          <div className="bg-eumedical-white border border-eumedical-light-blue rounded-xl p-5 flex flex-col xl:flex-row xl:items-center justify-between gap-6 shadow-sm">
+          <div 
+            className="bg-eumedical-white border border-eumedical-light-blue rounded-xl p-5 flex flex-col 
+            xl:flex-row xl:items-center justify-between gap-6 shadow-sm"
+          >
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-3 text-eumedical-dark-blue">
                 <User className="w-5 h-5 text-eumedical-light-aquamarine shrink-0" aria-hidden="true" />
@@ -96,7 +112,11 @@ export default function DashboardIndex() {
             <button 
               type="button"
               disabled
-              className="flex items-center justify-center gap-2 bg-eumedical-plain-yellow text-eumedical-dark-blue font-bold rounded-xl px-6 py-4 md:py-3 hover:bg-eumedical-dark-orange transition-colors focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-eumedical-dark-blue w-full xl:w-auto shrink-0 cursor-pointer disabled:opacity-50 disabled:hover:bg-eumedical-plain-yellow disabled:cursor-not-allowed"
+              className="flex items-center justify-center gap-2 bg-eumedical-plain-yellow text-eumedical-dark-blue 
+              font-bold rounded-xl px-6 py-4 md:py-3 hover:bg-eumedical-dark-orange transition-colors 
+              focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-eumedical-dark-blue w-full 
+              xl:w-auto shrink-0 cursor-pointer disabled:opacity-50 disabled:hover:bg-eumedical-plain-yellow 
+              disabled:cursor-not-allowed"
             >
               <Video className="w-5 h-5" aria-hidden="true" />
               Acceder a teleconsulta
@@ -110,7 +130,10 @@ export default function DashboardIndex() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
         {/* Card 1 (Treatments) */}
-        <div className="bg-eumedical-white rounded-2xl shadow-sm border border-eumedical-light-blue p-6 hover:shadow-md transition-shadow cursor-pointer">
+        <div 
+          className="bg-eumedical-white rounded-2xl shadow-sm border border-eumedical-light-blue p-6 
+          hover:shadow-md transition-shadow cursor-pointer"
+        >
           <div className="w-12 h-12 bg-eumedical-medium-aquamarine/10 rounded-full flex items-center justify-center mb-4">
             <Pill className="w-6 h-6 text-eumedical-medium-aquamarine" aria-hidden="true" />
           </div>
@@ -120,7 +143,10 @@ export default function DashboardIndex() {
         </div>
 
         {/* Card 2 (Documents) */}
-        <div className="bg-eumedical-white rounded-2xl shadow-sm border border-eumedical-light-blue p-6 hover:shadow-md transition-shadow cursor-pointer">
+        <div 
+          className="bg-eumedical-white rounded-2xl shadow-sm border border-eumedical-light-blue p-6 
+          hover:shadow-md transition-shadow cursor-pointer"
+        >
           <div className="w-12 h-12 bg-eumedical-dark-blue/10 rounded-full flex items-center justify-center mb-4">
             <FileText className="w-6 h-6 text-eumedical-dark-blue" aria-hidden="true" />
           </div>
@@ -130,7 +156,10 @@ export default function DashboardIndex() {
         </div>
 
         {/* Card 3 (History) */}
-        <div className="bg-eumedical-white rounded-2xl shadow-sm border border-eumedical-light-blue p-6 hover:shadow-md transition-shadow cursor-pointer">
+        <div 
+          className="bg-eumedical-white rounded-2xl shadow-sm border border-eumedical-light-blue p-6 
+          hover:shadow-md transition-shadow cursor-pointer"
+        >
           <div className="w-12 h-12 bg-eumedical-light-grey rounded-full flex items-center justify-center mb-4">
             <History className="w-6 h-6 text-eumedical-dark-blue/70" aria-hidden="true" />
           </div>
