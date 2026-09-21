@@ -233,9 +233,9 @@ export default function DashboardDocumentos() {
                 block p-2 font-didact outline-none cursor-pointer"
                 defaultValue="5"
               >
-                <option value="5">5 consultas por página</option>
-                <option value="10">10 consultas por página</option>
-                <option value="25">25 consultas por página</option>
+                <option value="5">5 documentos por página</option>
+                <option value="10">10 documentos por página</option>
+                <option value="25">25 documentos por página</option>
               </select>
             </div>
 

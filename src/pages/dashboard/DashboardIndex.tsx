@@ -34,7 +34,7 @@ export default function DashboardIndex() {
           <div>
             <p className="text-sm text-eumedical-dark-blue/70 mb-1">Estado</p>
             <span 
-              className="inline-block bg-eumedical-light-aquamarine/50 text-eumedical-medium-aquamarine 
+              className="inline-block bg-green-300 text-green-700 
               font-bold px-3 py-1 rounded-full text-sm"
             >
               Activo
